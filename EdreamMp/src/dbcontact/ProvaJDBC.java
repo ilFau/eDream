@@ -7,11 +7,11 @@ public class ProvaJDBC {
 	    try {
 	      String driver = "sun.jdbc.odbc.JdbcOdbcDriver";
 	      Class.forName(driver);
-	      String url = "jdbc:odbc:mysql.netsons.com:3306";
+	      String url = "jdbc:odbc:sun.jdbc.odbc.JdbcOdbcDriver";
 	      Connection con = DriverManager.getConnection(
 	    		  url, 
-	    		  "kptjvfdg_edream", 
-	    		  "MP15-16prog");
+	    		  "***", 
+	    		  "***");
 	      Statement cmd = con.createStatement();
 	      String query = "SELECT * FROM Tratte";
 	      ResultSet res = cmd.executeQuery(query);
