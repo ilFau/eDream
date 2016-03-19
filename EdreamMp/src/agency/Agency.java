@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Agency {
     private List<Travel> regTravel;
-    private List<Employees> regEmployees;
-    private List<Veicles> regVeicle;
+    private List<Employed> regEmployees;
+    private List<Vehicles> regVeicle;
     private List<Customers> regCustomers;
     private String name,town;
     private static Agency thisInstance;
@@ -16,16 +16,16 @@ public class Agency {
     }
     
     public static Agency getInstance(String name, String town){
-	if(thisInstance == null){
-	    thisInstance = new Agency(name,town);
+	if(Agency.thisInstance == null){
+	    Agency.thisInstance = new Agency(name,town);
 	}
-	return thisInstance;
+	return Agency.thisInstance;
     }
     public String getName() {
-	return name;
+	return this.name;
     }
     public String getTown() {
-	return town;
+	return this.town;
     }
     
 }

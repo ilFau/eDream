@@ -1,6 +1,6 @@
 package agency;
 
-public class ConcreteEmployed implements Employees {
+public class ConcreteEmployed implements Employed {
     private String name, position;
     
     ConcreteEmployed(String name, String position){

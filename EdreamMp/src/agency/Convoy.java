@@ -2,17 +2,17 @@ package agency;
 
 import java.util.*;
 
-public class Convoy implements Veicles {
-    private List<Veicles> convoyList;
+public class Convoy implements Vehicles {
+    private List<Vehicles> convoyList;
     
     public Convoy(){
-	this.convoyList = new LinkedList<Veicles>();
+	this.convoyList = new LinkedList<Vehicles>();
     }
-    public void addVeicle(Veicles newVeicle){
-	convoyList.add(newVeicle);
+    public void addVeicle(Vehicles newVehicle){
+	convoyList.add(newVehicle);
     }
-    public void removeVeicle(Veicles rmvVeicle){
-	convoyList.remove(rmvVeicle);
+    public void removeVeicle(Vehicles rmvVehicle){
+	convoyList.remove(rmvVehicle);
     }
     
     @Override
@@ -23,10 +23,10 @@ public class Convoy implements Veicles {
     @Override
     public int getSeats() {
 	int totalSeats=0;
-    	Iterator<Veicles> veicleQueue = convoyList.iterator();
-    	while(veicleQueue.hasNext()){
-    	    Veicles thatVeicle = veicleQueue.next();
-    	    totalSeats= totalSeats+thatVeicle.getSeats();  
+    	Iterator<Vehicles> vehicleQueue = convoyList.iterator();
+    	while(vehicleQueue.hasNext()){
+    	    Vehicles thatVehicle = vehicleQueue.next();
+    	    totalSeats= totalSeats+thatVehicle.getSeats();  
     	}
 	return totalSeats;
     }
@@ -34,21 +34,21 @@ public class Convoy implements Veicles {
     @Override
     public List<Customers> getPassengers() {
 	List<Customers> listOfPassenger = new LinkedList<Customers>();
-	Iterator<Veicles> veicleQueue = convoyList.iterator();
-    	while(veicleQueue.hasNext()){
-    	    Veicles thatVeicle = veicleQueue.next();
-    	    listOfPassenger.addAll(thatVeicle.getPassengers());  
+	Iterator<Vehicles> vehicleQueue = convoyList.iterator();
+    	while(vehicleQueue.hasNext()){
+    	    Vehicles thatVehicle = vehicleQueue.next();
+    	    listOfPassenger.addAll(thatVehicle.getPassengers());  
     	}
     	return listOfPassenger;
     }
 
     @Override
-    public List<Employees> getCrew() {
-	List<Employees> listOfEmployees = new LinkedList<Employees>();
-	Iterator<Veicles> veicleQueue = convoyList.iterator();
-    	while(veicleQueue.hasNext()){
-    	    Veicles thatVeicle = veicleQueue.next();
-    	    listOfEmployees.addAll(thatVeicle.getCrew());  
+    public List<Employed> getCrew() {
+	List<Employed> listOfEmployees = new LinkedList<Employed>();
+	Iterator<Vehicles> vehicleQueue = convoyList.iterator();
+    	while(vehicleQueue.hasNext()){
+    	    Vehicles thatVehicle = vehicleQueue.next();
+    	    listOfEmployees.addAll(thatVehicle.getCrew());  
     	}
 	return listOfEmployees;
     }

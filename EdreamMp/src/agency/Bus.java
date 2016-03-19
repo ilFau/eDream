@@ -2,13 +2,13 @@ package agency;
 
 import java.util.*;
 
-public class Bus implements Veicles {
+public class Bus implements Vehicles {
     private String name;
-    private List<Employees> crew;
+    private List<Employed> crew;
     private List<Customers> passengers;
     private int seats;
     
-    public Bus(Bus prototype){
+    public Bus(Vehicles prototype){
 	this.name = prototype.getName();
 	this.seats = prototype.getSeats();
 	this.passengers = new ArrayList<Customers>(this.seats);
@@ -34,7 +34,7 @@ public class Bus implements Veicles {
     }
 
     @Override
-    public List<Employees> getCrew() {
+    public List<Employed> getCrew() {
 	return this.crew;
     }
 

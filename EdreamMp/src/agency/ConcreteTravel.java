@@ -4,9 +4,9 @@ import java.util.*;
 
 public class ConcreteTravel implements Travel {
     private String name;
-    private Employees supervisor;
-    private Veicles fleet;
-    private List<Travel> myStep;
+    private Employed supervisor;
+    private Vehicles fleet;
+    private List<Travel> myStep; //da sostituire con la classe delle tappe.
     
     @Override
     public void getTour() {
@@ -34,19 +34,19 @@ public class ConcreteTravel implements Travel {
 	return 0;
     }
     
-    public Employees getSupervisor() {
+    public Employed getSupervisor() {
 	return this.supervisor;
     }
 
-    public void setSupervisor(Employees employer) {
+    public void setSupervisor(Employed employer) {
 	this.supervisor = employer;
     }
 
-    public Veicles getFleet() {
+    public Vehicles getFleet() {
 	return fleet;
     }
 
-    public void addFleet(Veicles fleet) {
+    public void addFleet(Vehicles fleet) {
 	this.fleet = fleet;
     }
     
