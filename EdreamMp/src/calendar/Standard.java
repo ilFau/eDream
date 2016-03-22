@@ -4,7 +4,7 @@ public class Standard implements Date {
 
 	private int year, month, day;
 
-	Standard(int year, int month, int day) {
+	public Standard(int year, int month, int day) {
 		this.setYear(year);
 		this.setDay(day);
 		this.setMonth(month);
