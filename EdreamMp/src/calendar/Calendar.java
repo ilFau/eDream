@@ -2,7 +2,7 @@ package calendar;
 
 import java.util.*;
 
-public class Calendar<E> {
+public class Calendar<E extends Event> {
 
 	Map<Date, List<E>> dateList;
 	Comparator<Date> cronological = new Cronological();
