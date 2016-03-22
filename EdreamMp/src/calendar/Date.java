@@ -8,6 +8,6 @@ public interface Date {
 
 	public int getDay();
 
-	public void printData ();
+	public void printDate (VisitorPrint v);
 
 }

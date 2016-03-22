@@ -35,10 +35,8 @@ public class Standard implements Date {
 	}
 
 	@Override
-	public void printData() {
-		System.out.print(this.getDay()+"-");
-		System.out.print(this.getMonth()+"-");
-		System.out.println(this.getYear());
+	public void printDate(VisitorPrint v) {
+		v.printDate(this);
 	}
 
 }
