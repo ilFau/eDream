@@ -1,4 +1,4 @@
-package calendar;
+package vecchioCalendar;
 
 public abstract class Event {
 	

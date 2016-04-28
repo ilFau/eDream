@@ -1,4 +1,4 @@
-package agency;
+package vecchiaAgenzia;
 
 public interface Employed {
     public String getName();

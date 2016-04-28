@@ -1,4 +1,4 @@
-package agency;
+package vecchiaAgenzia;
 
 public interface Travel {
     public void getTour();//TO-DO ancora non esiste l'interfaccia della tappa
