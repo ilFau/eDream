@@ -5,8 +5,8 @@ import java.util.*;
 public class Prodotto {
 
 	protected Tratte tratta;
-	protected List<Dipendente> hostess;
-	protected List<Dipendente> autisti;
+	protected List<Hostess> hostess;
+	protected List<Autista> autisti;
 	protected List<Autobus> autobus;
 	protected Quota quotaDefault;
 
@@ -22,11 +22,11 @@ public class Prodotto {
 		return tratta;
 	}
 
-	public List<Dipendente> getHostess() {
+	public List<Hostess> getHostess() {
 		return hostess;
 	}
 
-	public List<Dipendente> getAutisti() {
+	public List<Autista> getAutisti() {
 		return autisti;
 	}
 
@@ -34,10 +34,10 @@ public class Prodotto {
 		return autobus;
 	}
 
-	public Prodotto(Tratte T, List<Dipendente> LDH, List<Dipendente> LDA, List<Autobus> LA) {
-		tratta = T.clone();
-		hostess = LDH;
-		autisti = LDA;
-		autobus = LA;
+	public Prodotto(Tratte tratta, List<Hostess> hostess, List<Autista> autisti, List<Autobus> autobus) {
+		this.tratta = tratta.clone();
+		this.hostess = hostess;
+		this.autisti = autisti;
+		this.autobus = autobus;
 	}
 }
