@@ -7,8 +7,8 @@ public class ProdottoEffettivo extends Prodotto{
 	private Date dataPartenza;
 	private Date dataArrivo;
 	
-	public ProdottoEffettivo(Tratte tratta, List<Hostess> hostess, List<Autista> autisti, List<Autobus> autobus, Date dataPartenza, Date dataArrivo) {
-		super(tratta, hostess, autisti, autobus);
+	public ProdottoEffettivo(Tratta tratta, List<Hostess> hostess, List<Autista> autisti, List<Autobus> autobus, int quotaDefault, Date dataPartenza, Date dataArrivo) {
+		super(tratta, hostess, autisti, autobus, quotaDefault);
 		this.dataPartenza = (Date) dataPartenza.clone();
 		this.dataPartenza = (Date) dataArrivo.clone();
 	}
@@ -24,8 +24,14 @@ public class ProdottoEffettivo extends Prodotto{
 		return tot;
 	}
 
-	public Date getData() {
+	public Date getDataPartenza() {
 		return dataPartenza;
 	}
+
+	public Date getDataArrivo() {
+		return dataArrivo;
+	}
+
+	
 	
 }

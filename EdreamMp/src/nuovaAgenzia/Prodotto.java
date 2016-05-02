@@ -4,21 +4,17 @@ import java.util.*;
 
 public class Prodotto {
 
-	protected Tratte tratta;
+	protected Tratta tratta;
 	protected List<Hostess> hostess;
 	protected List<Autista> autisti;
 	protected List<Autobus> autobus;
-	protected Quota quotaDefault;
+	protected int quotaDefault;
 
-	public Quota getQuotaDefault() {
+	public int getQuotaDefault() {
 		return quotaDefault;
 	}
 
-	public void setQuotaDefault(Quota quotaDefault) {
-		this.quotaDefault = quotaDefault;
-	}
-
-	public Tratte getTratta() {
+	public Tratta getTratta() {
 		return tratta;
 	}
 
@@ -34,10 +30,11 @@ public class Prodotto {
 		return autobus;
 	}
 
-	public Prodotto(Tratte tratta, List<Hostess> hostess, List<Autista> autisti, List<Autobus> autobus) {
+	public Prodotto(Tratta tratta, List<Hostess> hostess, List<Autista> autisti, List<Autobus> autobus, int quotaDefault) {
 		this.tratta = tratta.clone();
 		this.hostess = hostess;
 		this.autisti = autisti;
 		this.autobus = autobus;
+		this.quotaDefault = quotaDefault;
 	}
 }
