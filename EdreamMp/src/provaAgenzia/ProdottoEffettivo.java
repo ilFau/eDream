@@ -9,4 +9,6 @@ public abstract class ProdottoEffettivo {
 	private Date dataArrivo;
 	private Truppa oggetti;
 
+	
+	
 }
