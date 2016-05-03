@@ -2,7 +2,7 @@ package provaAgenzia;
 
 import java.util.*;
 
-public abstract class Driver implements Employees {
+public abstract class Driver extends Employees {
 	
 	private List<Product> listWork;
 	

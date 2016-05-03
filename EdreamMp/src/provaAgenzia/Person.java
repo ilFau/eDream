@@ -1,9 +1,19 @@
 package provaAgenzia;
 
-public interface Person {
+public abstract class Person {
 	
-	String getName();
-	String getLastName();
-	String getFiscalCode();
+	private String name;
+	private String lastName;
+	private String fiscalCode;
+	
+	public String getName(){
+		return this.name;
+	}
+	public String getLastName() {
+		return this.lastName;
+	}
+	public String getFiscalCode() {
+		return this.fiscalCode;
+	}
 
 }
