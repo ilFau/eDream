@@ -2,7 +2,7 @@ package agenda;
 
 import java.util.TreeMap;
 
-import dateTime.Date;
+import java.util.Date;
 
 public class TreeCalendar extends MappedCalendar {
 	

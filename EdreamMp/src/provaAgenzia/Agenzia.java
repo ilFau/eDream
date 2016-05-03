@@ -1,6 +1,7 @@
 package provaAgenzia;
 
 import java.util.Collection;
+import agenda.Calendar;
 
 public interface Agenzia {
 

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
-import dateTime.Date;
+import java.util.Date;
 
 public interface Calendar extends Iterable<Date>, Serializable {
 
