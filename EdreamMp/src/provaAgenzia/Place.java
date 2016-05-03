@@ -1,5 +1,5 @@
 package provaAgenzia;
 
-public interface Luogo {
+public interface Place {
 
 }

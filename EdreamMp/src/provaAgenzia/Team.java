@@ -2,17 +2,17 @@ package provaAgenzia;
 
 import java.util.*;
 
-public abstract class Troop {
+public abstract class Team {
 	
 	private List<Hostess> hostess;
-	private List<Autista> autisti;
+	private List<Driver> autisti;
 	private List<Autobus> autobus;
 	
 	public void addHostess (Hostess nuovaHostess) {
 		this.hostess.add(nuovaHostess);
 	}
 	
-	public void addAutisti (Autista nuovoAutista) {
+	public void addAutisti (Driver nuovoAutista) {
 		this.autisti.add(nuovoAutista);		
 	}
 	
@@ -24,7 +24,7 @@ public abstract class Troop {
 		return hostess.iterator();
 	}
 	
-	public Iterator<Autista> getAutisti() {
+	public Iterator<Driver> getAutisti() {
 		return autisti.iterator();
 	}
 	
@@ -32,16 +32,16 @@ public abstract class Troop {
 		return autobus.iterator();
 	}
 	
-	public int numeroPostiDisponibili() {
-		Iterator<Autobus> iteratorAutobus = getAutobus();
-		Autobus autobusAttuale = iteratorAutobus.next();
-		int totCapienza = autobusAttuale.getCapienza();
-		while (iteratorAutobus.hasNext()) {
-			autobusAttuale = iteratorAutobus.next();
-			totCapienza += autobusAttuale.getCapienza();
-		}
-		return totCapienza;
-	}
+//	public int numeroPostiDisponibili() {
+//		Iterator<Autobus> iteratorAutobus = getAutobus();
+//		Autobus autobusAttuale = iteratorAutobus.next();
+//		int totCapienza = autobusAttuale.getCapienza();
+//		while (iteratorAutobus.hasNext()) {
+//			autobusAttuale = iteratorAutobus.next();
+//			totCapienza += autobusAttuale.getCapienza();
+//		}
+//		return totCapienza;
+//	}
 	
 	
 

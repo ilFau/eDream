@@ -1,5 +1,5 @@
 package provaAgenzia;
 
-public abstract class Hostess implements Dipendenti {
+public abstract class Hostess implements Employees {
 
 }

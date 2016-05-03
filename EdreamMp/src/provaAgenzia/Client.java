@@ -1,5 +1,5 @@
 package provaAgenzia;
 
-public interface Cliente {
+public interface Client {
 
 }
