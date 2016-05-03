@@ -2,7 +2,7 @@ package provaAgenzia;
 
 import java.util.*;
 
-public abstract class Truppa {
+public abstract class Troop {
 	
 	private List<Hostess> hostess;
 	private List<Autista> autisti;
