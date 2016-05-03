@@ -1,5 +1,5 @@
 package provaAgenzia;
 
-public class Autista implements Dipendenti {
+public abstract class Autista implements Dipendenti {
 
 }
