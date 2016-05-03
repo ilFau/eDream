@@ -9,6 +9,4 @@ public abstract class Autista implements Dipendenti {
 	public Autista(String nome, String cognome, String codiceFiscale) {
 	}
 	
-	
-
 }
