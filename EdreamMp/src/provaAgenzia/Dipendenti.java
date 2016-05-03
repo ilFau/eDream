@@ -1,5 +1,5 @@
 package provaAgenzia;
 
-public interface Dipendenti {
+public interface Dipendenti extends Persona{
 
 }
