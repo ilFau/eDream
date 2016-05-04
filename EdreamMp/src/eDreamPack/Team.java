@@ -5,44 +5,31 @@ import java.util.*;
 public abstract class Team {
 	
 	private List<Hostess> hostess;
-	private List<Driver> autisti;
+	private List<Driver> driver;
 	private List<Autobus> autobus;
 	
 	public void addHostess (Hostess nuovaHostess) {
 		this.hostess.add(nuovaHostess);
 	}
 	
-	public void addAutisti (Driver nuovoAutista) {
-		this.autisti.add(nuovoAutista);		
+	public void addDriver (Driver newDriver) {
+		this.driver.add(newDriver);		
 	}
 	
-	public void addAutobus (Autobus nuovoAutobus) {
-		this.autobus.add(nuovoAutobus);
+	public void addAutobus (Autobus newAutobus) {
+		this.autobus.add(newAutobus);
 	}
 	
-	public Iterator<Hostess> getHostess() {
-		return hostess.iterator();
+	public List<Hostess> getHostess() {
+		return this.hostess;
 	}
 	
-	public Iterator<Driver> getAutisti() {
-		return autisti.iterator();
+	public List<Driver> getDriver() {
+		return this.driver;
 	}
 	
-	public Iterator<Autobus> getAutobus () {
-		return autobus.iterator();
-	}
-	
-//	public int numeroPostiDisponibili() {
-//		Iterator<Autobus> iteratorAutobus = getAutobus();
-//		Autobus autobusAttuale = iteratorAutobus.next();
-//		int totCapienza = autobusAttuale.getCapienza();
-//		while (iteratorAutobus.hasNext()) {
-//			autobusAttuale = iteratorAutobus.next();
-//			totCapienza += autobusAttuale.getCapienza();
-//		}
-//		return totCapienza;
-//	}
-	
-	
+	public List<Autobus> getAutobus () {
+		return this.autobus;
+	}	
 
 }

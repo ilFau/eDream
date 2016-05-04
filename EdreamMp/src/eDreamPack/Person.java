@@ -15,21 +15,25 @@ public abstract class Person {
 	public String getName(){
 		return this.name;
 	}
-	public void setName(String name){
+	
+	private void setName(String name){
 		this.name = name;
 	}
+	
 	public String getFiscalCode() {
 		return fiscalCode;
 	}
-	public void setFiscalCode(String fiscalCode) {
+	
+	private void setFiscalCode(String fiscalCode) {
 		this.fiscalCode = fiscalCode;
 	}
+	
 	public String getLastName() {
 		return lastName;
 	}
-	public void setLastName(String lastName) {
+	
+	private void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
-
+	
 }

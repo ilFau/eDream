@@ -6,24 +6,38 @@ public abstract class Employees extends Person {
 
 	private UUID myID;
 	private boolean travelling = false;
-	private List<Product> listWork;
+	private List<ActualProduct> listWork;
 
 	public Employees(String name, String lastName, String fiscalCode) {
 		super(name, lastName, fiscalCode);
 		this.setID();
 		this.setTravelling(false);
-		this.listWork = new LinkedList<Product>();
+		this.listWork = new LinkedList<ActualProduct>();
 	}
 
-	public Iterator<Product> getListWork() {
-		return listWork.iterator();
+	public List<ActualProduct> getListWork() {
+		return listWork;
 	}
 
-	private void addNewWork(Product newWork) {
-		listWork.add(newWork);
+	public boolean addNewWork(ActualProduct newWork) {
+		try {
+			listWork.add(newWork);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	public boolean removeOldWork (ActualProduct oldWork) {
+		try {
+			listWork.remove(oldWork);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
-	protected void setID() {
+	private void setID() {
 		this.myID = UUID.randomUUID();
 	}
 
@@ -31,7 +45,7 @@ public abstract class Employees extends Person {
 		return this.myID.toString();
 	}
 
-	protected void setTravelling(boolean trueOrFalse) {
+	private void setTravelling(boolean trueOrFalse) {
 		this.travelling = trueOrFalse;
 	}
 
