@@ -4,16 +4,14 @@ import java.util.*;
 
 public abstract class Employees extends Person {
 
-	protected UUID myID;
-	protected boolean travelling = false;
-	protected List<Product> listWork;
+	private UUID myID;
+	private boolean travelling = false;
+	private List<Product> listWork;
 
 	public Employees(String name, String lastName, String fiscalCode) {
-		this.name = name;
-		this.lastName = lastName;
-		this.fiscalCode = fiscalCode;
+		super(name, lastName, fiscalCode);
 		this.setID();
-		this.travelling = false;
+		this.setTravelling(false);
 		this.listWork = new LinkedList<Product>();
 	}
 

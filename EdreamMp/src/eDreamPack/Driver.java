@@ -1,7 +1,5 @@
 package eDreamPack;
 
-import java.util.*;
-
 public abstract class Driver extends Employees {
 
 	private String drivingLicense;

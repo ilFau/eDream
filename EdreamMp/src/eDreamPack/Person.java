@@ -2,18 +2,34 @@ package eDreamPack;
 
 public abstract class Person {
 	
-	protected String name;
-	protected String lastName;
-	protected String fiscalCode;
+	private String name;
+	private String lastName;
+	private String fiscalCode;
+	
+	public Person(String name, String lastName, String fiscalCode){
+		this.setName(name);
+		this.setLastName(lastName);
+		this.setFiscalCode(fiscalCode);
+	}
 	
 	public String getName(){
 		return this.name;
 	}
-	public String getLastName() {
-		return this.lastName;
+	public void setName(String name){
+		this.name = name;
 	}
 	public String getFiscalCode() {
-		return this.fiscalCode;
+		return fiscalCode;
 	}
+	public void setFiscalCode(String fiscalCode) {
+		this.fiscalCode = fiscalCode;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
 
 }
