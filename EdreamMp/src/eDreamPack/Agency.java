@@ -2,7 +2,7 @@ package eDreamPack;
 
 import java.util.Collection;
 
-import agenda.Calendar;
+import agenda.Calendario;
 
 public interface Agency {
 
@@ -10,7 +10,7 @@ public interface Agency {
 	public Collection<Client> allCustomers();
 	public Collection<Employees> allEmployers();
 	public Collection<Autobus> veiclesPark();
-	public Calendar activeTravel();
-	public Calendar archiviedTravel();
+	public Calendario activeTravel();
+	public Calendario archiviedTravel();
 	
 }
