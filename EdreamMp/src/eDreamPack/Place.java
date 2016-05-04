@@ -4,15 +4,23 @@ import java.util.*;
 
 public abstract class Place {
 
-	public String Nome;
-	public List<Hotel> listaDiHotel;
+	public String name;
+	public List<Hotel> hotels;
 
-	public void setNome(String nome) {
-		this.Nome = nome;
+	private void setName(String name) {
+		this.name = name;
+	}
+	
+	private String getName() {
+		return this.name;
 	}
 
-	public String getNome() {
-		return this.Nome;
+	public List<Hotel> getHotels() {
+		return this.hotels;
+	}
+
+	private void setHotels(List<Hotel> hotels) {
+		this.hotels = hotels;
 	}
 	
 }

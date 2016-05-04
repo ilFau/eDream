@@ -6,13 +6,16 @@ public abstract class Driver extends Employees {
 	
 	public Driver(String name, String lastName, String fiscalCode,String drivingLicense) {
 		super(name, lastName, fiscalCode);
-		this.drivingLicense = drivingLicense;
+		setDrivingLicense(drivingLicense);
 	}
 
 	public String getTipoPatente() {
 		return drivingLicense;
 	}	
 	
+	private void setDrivingLicense(String drivingLicense) {
+		this.drivingLicense = drivingLicense;
+	}
 	
 	
 }
