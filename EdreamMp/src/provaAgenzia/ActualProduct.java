@@ -9,7 +9,6 @@ public abstract class ActualProduct {
 	private Date arrivalDate;
 	private Team teamProduct;
 	
-	
 	public Product getProduct() {
 		return product;
 	}

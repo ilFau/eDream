@@ -2,9 +2,9 @@ package provaAgenzia;
 
 public abstract class Person {
 	
-	private String name;
-	private String lastName;
-	private String fiscalCode;
+	protected String name;
+	protected String lastName;
+	protected String fiscalCode;
 	
 	public String getName(){
 		return this.name;

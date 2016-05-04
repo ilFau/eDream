@@ -2,13 +2,15 @@ package provaAgenzia;
 
 public class Hostess extends Employees {
 
-	public Hostess returnType(){
-		return this;
-	}
+	private String skills;
 	
-	public String toString(){
-		String tmpString = new String ("Sono l'hostess "+this.getName()+" ed il mio ID e` "+this.getID());
-		return tmpString;
+	public Hostess(String name, String lastName, String fiscalCode, String skills) {
+		super(name, lastName, fiscalCode);
+		this.skills = skills;
+	}
+
+	public String getSkills() {
+		return skills;
 	}
 	
 }

@@ -2,28 +2,43 @@ package provaAgenzia;
 
 import java.util.*;
 
-public abstract class Employees extends Person{
+public abstract class Employees extends Person {
 
-	private UUID myID;
-	private boolean inViaggio = false;		
+	protected UUID myID;
+	protected boolean travelling = false;
+	protected List<Product> listWork;
 
-	public void setID() {
-		 this.myID = UUID.randomUUID(); 	
+	public Employees(String name, String lastName, String fiscalCode) {
+		this.name = name;
+		this.lastName = lastName;
+		this.fiscalCode = fiscalCode;
+		this.setID();
+		this.travelling = false;
+		this.listWork = new LinkedList<Product>();
 	}
-	
-	public UUID getID() {
-		return this.myID;
+
+	public Iterator<Product> getListWork() {
+		return listWork.iterator();
 	}
-	
-	public void setInViaggio(boolean trueOrFalse){
-		this.inViaggio = trueOrFalse;
+
+	private void addNewWork(Product newWork) {
+		listWork.add(newWork);
 	}
-	
-	public boolean getInViaggio() {
-		return this.inViaggio;
+
+	protected void setID() {
+		this.myID = UUID.randomUUID();
 	}
-	
-	public abstract Employees returnType();
-	
-	public abstract String toString();
+
+	public String getID() {
+		return this.myID.toString();
+	}
+
+	protected void setTravelling(boolean trueOrFalse) {
+		this.travelling = trueOrFalse;
+	}
+
+	public boolean getTravelling() {
+		return this.travelling;
+	}
+
 }
