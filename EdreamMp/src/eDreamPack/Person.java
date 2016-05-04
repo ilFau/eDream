@@ -1,4 +1,4 @@
-package provaAgenzia;
+package eDreamPack;
 
 public abstract class Person {
 	

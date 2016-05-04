@@ -1,4 +1,4 @@
-package provaAgenzia;
+package eDreamPack;
 
 import java.io.Serializable;
 

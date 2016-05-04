@@ -1,4 +1,4 @@
-package provaAgenzia;
+package eDreamPack;
 
 public interface Product {
 	
