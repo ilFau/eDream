@@ -30,8 +30,6 @@ public class Test {
 		
 		stampaDipendenti(miaAgenzia);
 		
-		
-		
 	}
 
 	private static void stampaDipendenti(MyAgency miaAgenzia) {
