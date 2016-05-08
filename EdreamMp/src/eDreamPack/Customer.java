@@ -34,4 +34,8 @@ public class Customer extends Person implements CustomerWithCart {
 		}
 		this.myPurchaseHistory.add(receipt);
 	}
+	
+	public String toString() {
+		return (this.getName()+" "+this.getLastName()+" "+this.getFiscalCode());
+	}
 }
