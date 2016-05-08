@@ -1,12 +1,12 @@
 package eDreamPack;
 
-public abstract class Driver extends Employees {
+public class Driver extends Employees {
 
 	private String drivingLicense;
 	
 	public Driver(String name, String lastName, String fiscalCode,String drivingLicense) {
 		super(name, lastName, fiscalCode);
-		setDrivingLicense(drivingLicense);
+		this.setDrivingLicense(drivingLicense);
 	}
 
 	public String getTipoPatente() {
@@ -16,6 +16,10 @@ public abstract class Driver extends Employees {
 	private void setDrivingLicense(String drivingLicense) {
 		this.drivingLicense = drivingLicense;
 	}
-	
+
+	@Override
+	public String added() {
+		return this.getTipoPatente();
+	}
 	
 }
