@@ -80,7 +80,7 @@ public class MyAgency implements Agency {
 
 	@Override
 	public Calendar archiviedTravel() {
-		return agenda;
+		return null;
 	}
 
 }

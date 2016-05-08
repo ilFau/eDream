@@ -4,6 +4,7 @@ import java.util.*;
 import customerCart.CustomerWithCart;
 import customerCart.Cart;
 import customerCart.Receipt;
+import testEDream.MyProduct;
 
 public class Customer extends Person implements CustomerWithCart {
 	private Cart myCart;
@@ -37,5 +38,18 @@ public class Customer extends Person implements CustomerWithCart {
 	
 	public String toString() {
 		return (this.getName()+" "+this.getLastName()+" "+this.getFiscalCode());
+	}
+	@Override
+	public boolean equals(Object obj){
+		if(!(obj instanceof Customer)){
+			return false;
+		}
+		Customer prod = (Customer)obj;
+		if(this.getName().equals(prod.getName())
+				&& this.getLastName().equals(prod.getLastName())
+				&& this.getFiscalCode().equals(prod.getFiscalCode())){
+			return true;
+		}
+		return false;
 	}
 }

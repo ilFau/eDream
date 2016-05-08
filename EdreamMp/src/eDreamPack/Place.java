@@ -6,12 +6,15 @@ public abstract class Place {
 
 	public String name;
 	public List<Hotel> hotels;
-
-	private void setName(String name) {
+	
+	public Place(String name){
+		this.setName(name);
+	}
+	public void setName(String name) {
 		this.name = name;
 	}
 	
-	private String getName() {
+	public String getName() {
 		return this.name;
 	}
 
