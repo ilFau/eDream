@@ -2,15 +2,18 @@ package eDreamPack;
 
 import java.util.Collection;
 
-import agenda.Calendario;
+import agenda.Calendar;
 
 public interface Agency {
 
-	public String getName();
-	public Collection<Client> allCustomers();
-	public Collection<Employees> allEmployers();
-	public Collection<Autobus> veiclesPark();
-	public Calendario activeTravel();
-	public Calendario archiviedTravel();
+	String getName();
+	Collection<Customer> allCustomers();
+	Collection<Employees> allEmployees();
+	Collection<Autobus> veiclesPark();
+	boolean addCustomers(Customer newCustomer);
+	boolean addEmployees(Employees newEmployees);
+	boolean addVeicles(Autobus newAutobus);
+	Calendar activeTravel();
+	Calendar archiviedTravel();
 	
 }

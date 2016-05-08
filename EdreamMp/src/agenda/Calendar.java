@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 import java.util.Date;
 
-public interface Calendario extends Iterable<Date>, Serializable {
+public interface Calendar extends Iterable<Date>, Serializable {
 
 	public Daily<?> getDaily(Date date);
 
