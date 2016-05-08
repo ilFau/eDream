@@ -16,5 +16,10 @@ public class Hostess extends Employees {
 	private void setSkills (String skills) {
 		this.skills = skills;
 	}
+
+	@Override
+	public String added() {
+		return (this.getSkills());
+	}
 	
 }
