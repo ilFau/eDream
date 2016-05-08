@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Date;
 
 
-public abstract class MappedCalendar implements Calendario {
+public abstract class MappedCalendar implements Calendar {
 	private Map<Date, Daily<?>> myDate;
 	
 	@Override

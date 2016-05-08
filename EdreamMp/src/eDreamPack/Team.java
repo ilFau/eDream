@@ -8,6 +8,12 @@ public abstract class Team {
 	private List<Driver> driver;
 	private List<Autobus> autobus;
 	
+	public Team () {
+		this.hostess = new LinkedList<Hostess>();
+		this.driver = new LinkedList<Driver>();
+		this.autobus = new LinkedList<Autobus>();
+	}
+	
 	public void addHostess (Hostess nuovaHostess) {
 		this.hostess.add(nuovaHostess);
 	}

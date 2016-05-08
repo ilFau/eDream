@@ -5,7 +5,7 @@ import customerCart.CustomerWithCart;
 import customerCart.Cart;
 import customerCart.Receipt;
 
-public class Customer extends Person implements Client, CustomerWithCart {
+public class Customer extends Person implements CustomerWithCart {
 	private Cart myCart;
 	private List<Receipt> myPurchaseHistory;
 	
@@ -33,5 +33,9 @@ public class Customer extends Person implements Client, CustomerWithCart {
 			this.myPurchaseHistory = new LinkedList<Receipt>();
 		}
 		this.myPurchaseHistory.add(receipt);
+	}
+	
+	public String toString() {
+		return (this.getName()+" "+this.getLastName()+" "+this.getFiscalCode());
 	}
 }
