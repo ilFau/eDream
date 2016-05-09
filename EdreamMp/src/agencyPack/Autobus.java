@@ -1,18 +1,17 @@
-package testEDream;
+package agencyPack;
 
-import eDreamPack.Autobus;
+import java.io.Serializable;
 
-public class MyAutobus implements Autobus {
-
+public class Autobus implements Serializable {
+	
 	private String name;
 	private int numSeats;
 	
-	public MyAutobus(String name, int numSeats) {
+	public Autobus(String name, int numSeats) {
 		this.setName(name);
 		this.setNumSeats(numSeats);
 	}
 	
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -21,7 +20,6 @@ public class MyAutobus implements Autobus {
 		this.name = name;
 	}
 
-	@Override
 	public int getNumSeats() {
 		return this.numSeats;
 	}
@@ -33,5 +31,5 @@ public class MyAutobus implements Autobus {
 	public String toString() {
 		return (this.getName()+" "+this.getNumSeats());
 	}
-
+	
 }

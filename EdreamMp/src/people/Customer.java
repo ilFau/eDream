@@ -1,4 +1,4 @@
-package eDreamPack;
+package people;
 
 import java.util.*;
 import customerCart.CustomerWithCart;

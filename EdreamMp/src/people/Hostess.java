@@ -1,4 +1,4 @@
-package eDreamPack;
+package people;
 
 public class Hostess extends Employees {
 

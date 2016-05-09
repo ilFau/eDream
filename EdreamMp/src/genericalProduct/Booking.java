@@ -1,4 +1,4 @@
-package eDreamPack;
+package genericalProduct;
 
 public abstract class Booking {
 	

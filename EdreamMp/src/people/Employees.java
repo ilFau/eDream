@@ -1,6 +1,8 @@
-package eDreamPack;
+package people;
 
 import java.util.*;
+
+import genericalProduct.ActualProduct;
 
 public abstract class Employees extends Person {
 

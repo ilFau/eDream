@@ -1,4 +1,7 @@
-package eDreamPack;
+package genericalProduct;
+
+import agencyPack.Place;
+import people.Team;
 
 public abstract class Product {
 	

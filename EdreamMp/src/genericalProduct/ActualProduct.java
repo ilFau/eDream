@@ -1,8 +1,10 @@
-package eDreamPack;
+package genericalProduct;
 
 import java.util.*;
 
-public abstract class ActualProduct {
+import people.Team;
+
+public class ActualProduct {
 	
 	private Product product;
 	private Date departureDate;
@@ -19,8 +21,6 @@ public abstract class ActualProduct {
 	private void setProduct(Product product) {
 		this.product = product;
 	}
-
-
 
 	private void setDepartureDate(Date departureDate) {
 		this.departureDate = departureDate;

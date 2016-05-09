@@ -1,4 +1,4 @@
-package eDreamPack;
+package people;
 
 public abstract class Person {
 	

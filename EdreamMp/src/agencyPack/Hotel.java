@@ -1,4 +1,4 @@
-package eDreamPack;
+package agencyPack;
 
 public abstract class Hotel {
 

@@ -1,18 +1,21 @@
-package testEDream;
+package agencyPack;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.LinkedList;
+
 import agenda.Calendar;
-import eDreamPack.*;
+import people.Customer;
+import people.Employees;
 
-public class MyAgency implements Agency {
+public abstract class Agency {
 
 	private String name;
 	private Collection<Customer> customers;
 	private Collection<Employees> employees;
 	private Collection<Autobus> autobus;
 	private Calendar agenda;
-	
-	public MyAgency (String nome) {
+
+	public Agency (String nome) {
 		this.setName(nome);
 		this.customers = new LinkedList<Customer>();
 		this.employees = new LinkedList<Employees>();
@@ -24,7 +27,6 @@ public class MyAgency implements Agency {
 		this.name = name;
 	}
 
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -33,17 +35,14 @@ public class MyAgency implements Agency {
 		return customers;
 	}
 
-	@Override
 	public Collection<Employees> allEmployees() {
 		return employees;
 	}
 
-	@Override
 	public Collection<Autobus> veiclesPark() {
 		return autobus;
 	}
 
-	@Override
 	public boolean addCustomers(Customer newCustomer) {
 		try {
 			customers.add(newCustomer);
@@ -53,7 +52,6 @@ public class MyAgency implements Agency {
 		}
 	}
 
-	@Override
 	public boolean addEmployees(Employees newEmployees) {
 		try {
 			employees.add(newEmployees);
@@ -63,7 +61,6 @@ public class MyAgency implements Agency {
 		}
 	}
 
-	@Override
 	public boolean addVeicles(Autobus newAutobus) {
 		try {
 			autobus.add(newAutobus);
@@ -72,13 +69,11 @@ public class MyAgency implements Agency {
 			return false;
 		}
 	}
-	
-	@Override
+
 	public Calendar activeTravel() {
 		return agenda;
 	}
 
-	@Override
 	public Calendar archiviedTravel() {
 		return agenda;
 	}
