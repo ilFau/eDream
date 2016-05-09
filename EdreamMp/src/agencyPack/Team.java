@@ -1,8 +1,9 @@
-package people;
+package agencyPack;
 
 import java.util.*;
 
-import agencyPack.Autobus;
+import people.Driver;
+import people.Hostess;
 
 public abstract class Team {
 	

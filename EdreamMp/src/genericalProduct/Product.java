@@ -1,7 +1,7 @@
 package genericalProduct;
 
 import agencyPack.Place;
-import people.Team;
+import agencyPack.Team;
 
 public abstract class Product {
 	

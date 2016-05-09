@@ -2,7 +2,7 @@ package genericalProduct;
 
 import java.util.*;
 
-import people.Team;
+import agencyPack.Team;
 
 public class ActualProduct {
 	

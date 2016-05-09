@@ -6,6 +6,7 @@ import customerCart.Cart;
 import customerCart.Receipt;
 
 public class Customer extends Person implements CustomerWithCart {
+	
 	private Cart myCart;
 	private List<Receipt> myPurchaseHistory;
 	
