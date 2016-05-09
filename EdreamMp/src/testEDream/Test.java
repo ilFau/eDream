@@ -30,23 +30,32 @@ public class Test {
 		
 		stampaDipendenti(miaAgenzia);
 		
-	}
-
-	private static void stampaDipendenti(MyAgency miaAgenzia) {
-		Iterator<Employees> tmpDipendenti = miaAgenzia.allEmployees().iterator();
-		Employees tmpEmployees;
-		while (tmpDipendenti.hasNext()) {
-			tmpEmployees = tmpDipendenti.next();
-			System.out.println(tmpEmployees.toString());
-		}
+		// creo un parco automezzi
+		
+		miaAgenzia.addVeicles(creaAutobus("autobus1",1));
+		miaAgenzia.addVeicles(creaAutobus("autobus2",2));
+		miaAgenzia.addVeicles(creaAutobus("autobus3",3));
+		
+		// provo a stampare il parco automezzi
+		
+		stampaAutomezzi(miaAgenzia);
+		
 	}
 
 	private static Employees creaDipendenteDriver(String string, String string2, String string3, String string4) {
 		return new Driver(string,string2,string3,string4);
 	}
 
+	private static Customer creaCliente(String nome, String cognome, String codFiscale) {
+		return new Customer(nome, cognome, codFiscale);
+	}
+	
 	private static Employees creaDipendenteHostess(String string, String string2, String string3, String string4) {
 		return new Hostess(string, string2, string3, string4);
+	}
+
+	private static Autobus creaAutobus(String string, int i) {
+		return new MyAutobus(string,i);
 	}
 
 	private static void stampaClienti(MyAgency miaAgenzia) {
@@ -56,11 +65,24 @@ public class Test {
 			tmpCustom = tmpClienti.next();
 			System.out.println(tmpCustom.toString());
 		}
-
 	}
-
-	private static Customer creaCliente(String nome, String cognome, String codFiscale) {
-		return new Customer(nome, cognome, codFiscale);
+	
+	private static void stampaDipendenti(MyAgency miaAgenzia) {
+		Iterator<Employees> tmpDipendenti = miaAgenzia.allEmployees().iterator();
+		Employees tmpEmployees;
+		while (tmpDipendenti.hasNext()) {
+			tmpEmployees = tmpDipendenti.next();
+			System.out.println(tmpEmployees.toString());
+		}
+	}
+	
+	private static void stampaAutomezzi(MyAgency miaAgenzia) {
+		Iterator<Autobus> tmpAutomezzo = miaAgenzia.veiclesPark().iterator();
+		Autobus tmpAutobus;
+		while (tmpAutomezzo.hasNext()) {
+			tmpAutobus = tmpAutomezzo.next();
+			System.out.println(tmpAutobus.toString());
+		}
 	}
 
 }
