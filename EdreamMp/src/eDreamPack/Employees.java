@@ -52,5 +52,11 @@ public abstract class Employees extends Person {
 	public boolean getTravelling() {
 		return this.travelling;
 	}
+	
+	public String toString () {
+		return (this.getName()+" "+this.getLastName()+" "+this.getFiscalCode()+" "+this.added());
+	}
+	
+	public abstract String added();
 
 }
